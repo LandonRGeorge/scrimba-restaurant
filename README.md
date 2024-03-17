@@ -1,5 +1,7 @@
 # Restaurant Ordering App
 
+[live site](https://spontaneous-pika-d794d3.netlify.app/)
+
 Quick start:
 
 ```
