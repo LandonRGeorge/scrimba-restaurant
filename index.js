@@ -35,7 +35,9 @@ const render = () => {
     // when "add" btn is clicked...
     addBtnEl.addEventListener('click', e => {
 
+      // reset the order confirmation banner in case it is showing
       confirmationBannerEl.classList.add('hidden')
+      confirmationBannerEl.innerHTML = ''
 
       // ...push item to array
       const line = {...m, lineID: Date.now()}
