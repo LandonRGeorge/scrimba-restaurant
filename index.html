@@ -19,22 +19,36 @@
   <main>
     <div class="container-inner">
 
-
       <div id="menu"></div>
       <div id="order" class="hidden">
         <h3 class="font-lg">Your Order</h3>
-        <ul class="order-lines">
-        </ul>
-
+        <ul class="order-lines"></ul>
         <div class="order-total">
           <div class="order-line">
             <span class="font-lg">Total Price:</span>
             <span class="order-line-total"></span>
           </div>
         </div>
+        <button id="order-complete" class="submit-btn">Complete Order</button>
       </div>
     </div>
   </main>
+
+  <div id="card-details" class="hidden">
+    <form action="">
+      <h2 class="font-lg">Enter card details</h2>
+      <input type="text" name="name" placeholder="Enter your name" required>
+      <input type="text" name="card" placeholder="Enter card number" required>
+      <input type="text" name="cvv" placeholder="Enter CVV" required>
+      <button type="submit" class="submit-btn">Pay</button>
+    </form>
+  </div>
+
+  <div class="container-inner">
+      <div id="confirmation-banner" class="hidden"></div>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>

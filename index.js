@@ -4,6 +4,9 @@ const menuEl = document.querySelector('#menu')
 const orderEl = document.querySelector('#order')
 const orderLinesEl = document.querySelector('.order-lines')
 const orderLineTotalEl = document.querySelector('.order-line-total')
+const orderCompleteEl = document.querySelector('#order-complete')
+const cardDetailsEl = document.querySelector('#card-details')
+const confirmationBannerEl = document.querySelector('#confirmation-banner')
 let lines = []
 
 const render = () => {
@@ -31,6 +34,8 @@ const render = () => {
 
     // when "add" btn is clicked...
     addBtnEl.addEventListener('click', e => {
+
+      confirmationBannerEl.classList.add('hidden')
 
       // ...push item to array
       const line = {...m, lineID: Date.now()}
@@ -82,5 +87,33 @@ function updateOrder(lines) {
 
 render()
 
+// when submit button clicked...
+orderCompleteEl.addEventListener('click', () => {
+  // ...show the card details modal
+  cardDetailsEl.classList.remove('hidden')
+})
 
+cardDetailsEl.querySelector('form').addEventListener('submit', e => {
+  e.preventDefault()
+
+  // hide the card details modal
+  cardDetailsEl.classList.add('hidden')
+
+  // reset the order
+  lines = []
+  orderLinesEl.innerHTML = ''
+  orderEl.classList.add('hidden')
+
+  // add banner message
+  const p = document.createElement('p')
+  p.classList.add('font-lg')
+  p.textContent = `Thanks, ${e.target.elements.name.value}! Your order is on its way!`
+  confirmationBannerEl.append(p)
+
+  // show the banner
+  confirmationBannerEl.classList.remove('hidden')
+
+  // reset the form
+  e.target.reset()
+})
 

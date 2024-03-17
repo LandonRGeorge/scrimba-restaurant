@@ -1,5 +1,6 @@
 :root {
     --gray: #8B8B8B;
+    --green: #16DB99;
 }
 
 * {
@@ -34,7 +35,10 @@ h1 {
 
 #container-outer {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 40px black;
 }
 
 .container-inner {
@@ -106,6 +110,21 @@ h1 {
     border-bottom: none;
 }
 
+.submit-btn {
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--green);
+    color: white;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.submit-btn:active {
+    background-color: #13b680;
+}
+
 .font-lg {
     font-size: 28px;
 }
@@ -125,6 +144,47 @@ h1 {
 .hidden {
     display: none;
 }
+
+#card-details {
+    box-shadow: 0 0 100px #8B8B8B;
+    border-radius: 5px;
+    padding: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 400px;
+}
+
+#card-details h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#card-details form {
+    /*margin: 40px;*/
+}
+
+#card-details input {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#confirmation-banner {
+    color: #065F46;
+    background-color: #ECFDF5;
+    padding: 40px;
+    text-align: center;
+}
+
+
 
 
 
