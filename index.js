@@ -1,13 +1,14 @@
 import {menuArray} from './data.js'
 
 const menuEl = document.querySelector('#menu')
+const orderEl = document.querySelector('#order')
 const orderLinesEl = document.querySelector('.order-lines')
 const orderLineTotalEl = document.querySelector('.order-line-total')
 let lines = []
 
 const render = () => {
   // update the total
-  updateTotal(lines)
+  updateOrder(lines)
 
   menuArray.forEach(m => {
 
@@ -51,7 +52,7 @@ const render = () => {
       orderLinesEl.append(orderLineEl)
 
       // update the total
-      updateTotal(lines)
+      updateOrder(lines)
 
       // remove button has been clicked
       removeBtnEl.addEventListener('click', () => {
@@ -60,7 +61,7 @@ const render = () => {
         // remove it from the array
         lines = lines.filter(l => l !== line)
         // update the total
-        updateTotal(lines)
+        updateOrder(lines)
       })
     })
 
@@ -69,9 +70,14 @@ const render = () => {
   })
 }
 
-function updateTotal(lines) {
+function updateOrder(lines) {
   const total = lines.reduce((total, cur) => total + cur.price, 0)
   orderLineTotalEl.textContent = `$${total}`
+  if (lines.length === 0) {
+    orderEl.classList.add('hidden')
+  } else {
+    orderEl.classList.remove('hidden')
+  }
 }
 
 render()

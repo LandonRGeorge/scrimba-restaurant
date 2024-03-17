@@ -122,6 +122,10 @@ h1 {
     color: var(--gray);
 }
 
+.hidden {
+    display: none;
+}
+
 
 
 
