@@ -9,13 +9,30 @@
   <script src="index.js" type="module" defer></script>
 </head>
 <body>
-<div id="container">
+<div id="container-outer">
   <header>
-    <h1>Jimmy's Diner</h1>
-    <h2>The best burgers and pizzas in town.</h2>
+    <div class="container-inner">
+      <h1>Jimmy's Diner</h1>
+      <h2 class="font-md">The best burgers and pizzas in town.</h2>
+    </div>
   </header>
   <main>
-    <div id="menu">
+    <div class="container-inner">
+
+
+      <div id="menu"></div>
+      <div id="order">
+        <h3 class="font-lg">Your Order</h3>
+        <ul class="order-lines">
+        </ul>
+
+        <div class="order-total">
+          <div class="order-line">
+            <span class="font-lg">Total Price:</span>
+            <span class="order-line-total"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </div>

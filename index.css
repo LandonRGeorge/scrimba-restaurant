@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 body {
@@ -24,53 +24,104 @@ header {
     gap: .6rem;
 }
 
+button {
+    cursor: pointer;
+}
+
 h1 {
     font-size: 3rem;
 }
 
-h2 {
-    font-size: 1.5rem;
-}
-
-#container {
+#container-outer {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.menu-item {
+.container-inner {
+    margin: 50px;
+}
+
+.menu-line {
     display: flex;
     gap: 20px;
-}
-
-.menu-item-details {
-    flex-grow: 1;
-}
-
-.menu-item-details-name {
-    font-size: 1.5rem;
-}
-
-.menu-item-img {
-    font-size: 5rem;
-    line-height: 5rem;
-}
-
-.menu-item-details-name {
-    font-size: 2rem;
-}
-
-.menu-item {
-    padding: 40px;
-    display: flex;
+    padding: 40px 0;
     align-items: center;
     border-bottom: 1px solid var(--gray);
 }
 
-.menu-item-add {
-    width: 50px;
-    height: 50px;
+.menu-line-details {
+    flex-grow: 1;
 }
 
-.menu-item-details-ingredients {
+.menu-line-img {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.menu-line-add-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    background-color: transparent;
+}
+
+.menu-line-add-btn:active {
+    background-color: #dcdcdc;
+}
+
+#order h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.order-lines {
+    list-style: none;
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-line-item-remove {
+    border: none;
+    background-color: transparent;
+}
+
+.order-line-item-remove:active {
+    color: #ff0000;
+}
+
+.order-line-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.order-total {
+    border-top: 2px solid black;
+    border-bottom: none;
+}
+
+.font-lg {
+    font-size: 28px;
+}
+
+.font-md {
+    font-size: 22px;
+}
+
+.font-sm {
+    font-size: 16px;
+}
+
+.color-gray {
     color: var(--gray);
 }
+
+
+
+
